@@ -26,9 +26,9 @@ app.get('/weather', (req, res) => {
   //extracting lat, long, and searchQuery from json file
   const {lat, lon, searchQuery} = req.query;
   // add error handling maybe??
-  //   if (!lat ||!lon || !searchQuery){
-  //     return res.status(400).json({error: 'Missing parameters'});
-  //   }
+  if (!lat ||!lon || !searchQuery){
+    return res.status(400).json({error: 'Missing parameters'});
+  }
   //res.send('Hello, express!');
 
   // fetching weather data
@@ -61,6 +61,5 @@ app.get('/weather', (req, res) => {
 app.listen(PORT, () => {
   // console.log(`Server is running on port ${PORT}`);
 });
-
 
 // to run port in thunder bolt... url: http://localhost:3001

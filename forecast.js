@@ -6,3 +6,5 @@ class Forecast {
     this.description = description;
   }
 }
+// const _Forecast = Forecast;
+export { _Forecast as Forecast };
