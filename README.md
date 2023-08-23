@@ -15,7 +15,7 @@ There will be a live site.
 I used express.
 ## Change Log
 
-08-23-2023 0:0pm - Application now has a fully-functional express server.
+08-23-2023 11:01pm - Application now has a fully-functional express server.
 
 ## Credit and Collaborations
 --
@@ -25,4 +25,10 @@ I used express.
 Screenshot of drawing:
 ![Alt text](<Screenshot 2023-08-22 at 3.08.05 PM.png>)
 
+Estimate of time needed to complete: 2 hours
 
+Start time: 4pm
+
+Finish time: 11pm
+
+Actual time needed to complete: 7 hrs
