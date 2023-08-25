@@ -20,21 +20,9 @@ class Forecast {
     this.description = description;
   }
 }
-function Movie(id, title, overview, averageVotes, totalVotes, imageUrl, popularity, releasedOn) {
-  this.id = id;
-  this.title = title;
-  this.overview = overview;
-  this.average_votes = averageVotes;
-  this.total_votes = totalVotes;
-  this.image_url = imageUrl;
-  this.popularity = popularity;
-  this.released_on = releasedOn;
-}
-
 
 async function getCurrentWeather (lat,lon){
   const response = await axios.get(`http://api.weatherbit.io/v2.0/current?key=${api_key}&lat=${lat}&lon=${lon}&units=I&days=7`);
-
   return response.data;
 
 }
@@ -110,13 +98,26 @@ app.get('/movies', async (request, response) => {
   try {
     const rawMovieData = await axios.get(movie_url);
     let formattedMovies = formatMovieData(rawMovieData.data.results);
+    console.log('this is our formatted movies', formattedMovies);
+
     response.status(200).send(formattedMovies);
   } catch (e) {
+    console.log('Error fetching movies', e);
     response.status(500).send(`nope ${e}`);
   }
 
 });
 
+function Movie(id, title, overview, averageVotes, totalVotes, imageUrl, popularity, releasedOn) {
+  this.id = id;
+  this.title = title;
+  this.overview = overview;
+  this.average_votes = averageVotes;
+  this.total_votes = totalVotes;
+  this.image_url = imageUrl;
+  this.popularity = popularity;
+  this.released_on = releasedOn;
+}
 
 // starting the server
 
