@@ -3,7 +3,7 @@
 # Project Name
 
 **Author**: Samaad Turner
-**Version**: 1.0.0 
+**Version**: 1.0.3
 
 ## Overview
 This project will I will build my own custom API server. The server will give data to the city explorer front-end application.
@@ -32,3 +32,16 @@ Start time: 4pm
 Finish time: 11pm
 
 Actual time needed to complete: 7 hrs
+
+
+
+
+Name of feature: added server.js
+
+Estimate of time needed to complete:5 hours
+
+Start time: 12:00pm
+
+Finish time: 6:30ppm
+
+Actual time needed to complete: 6.5 hrs
